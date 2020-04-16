@@ -1,13 +1,12 @@
 var updateInterval = null;
 
 const worldsEdgeMinutes = 120;
-const canyonMinutes = 90;
-const afterDarkMinutes = 30;
+const canyonMinutes = 60;
 const startingWorld = 0;
-const startingDateTime = new Date(Date.UTC(2020, 3, 16, 1, 30)); //april 16 2020, 12:30am
+const startingDateTime = new Date(Date.UTC(2020, 3, 16, 1, 30)); //april 16 2020, 12:30am (Iowa GCE 4)
 const millisPerMinute = 60000;
 
-var currentWorld = startingWorld; // 0 = WE, 1 = KC, 2 = AD
+var currentWorld = startingWorld; // 0 = WE, 1 = KC
 var lastMapUpdateTime = startingDateTime;
 
 String.prototype.toHHMMSS = function () {
@@ -82,7 +81,7 @@ function getNextMapID()
 {
     var d = currentWorld;
     d = currentWorld + 1;
-    if(d == 3)
+    if(d == 2)
         d = 0;
     return d;
 }
@@ -96,10 +95,6 @@ function getNextDuration()
     else if(currentWorld == 1)
     {
         return canyonMinutes;
-    }
-    else if(currentWorld == 2)
-    {
-        return afterDarkMinutes;
     }
     return 0;
 }
