@@ -1,6 +1,6 @@
 
 body {
-    background-image: url('worldsedge.png');
+    background-color: black;
     background-position: center center no-repeat fixed;
     background-size:cover;
     background-repeat: no-repeat;
