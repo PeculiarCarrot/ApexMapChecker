@@ -1,7 +1,7 @@
 var updateInterval = null;
 
 const worldsEdgeMinutes = 120;
-const canyonMinutes = 60;
+const canyonMinutes = 90;
 const startingWorld = 0;
 const startingDateTime = new Date(Date.UTC(2020, 3, 16, 1, 30)); //april 16 2020, 12:30am (Iowa GCE 4)
 const millisPerMinute = 60000;
